@@ -1,20 +1,17 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/FileManager.php'; php?>
-
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <? FileManager::linkCSS('/vendor/css/splide.min.css'); ?>
-    <? FileManager::linkCSS('/figma/style.css');?>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/vendor/css/splide.min.css">
     <script src="/vendor/js/jquery-3.7.1.min.js"></script>
     <title>Тестовый макет</title>
 </head>
 <body>
     <header>
         <div class="main-header container">
-            <a href="/figma/layout.php" class="header-icon">
+            <a href="/index.html" class="header-icon">
                 <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="25" cy="12" r="12" fill="#ECEFF2"/>
                     <circle cx="12" cy="12" r="12" fill="#2A6CEA"/>
@@ -37,7 +34,7 @@
             </div>
             <div class="header-burger__menu">
                 <div class="header-burger__header">
-                    <a href="/figma/layout.php" class="header-icon">
+                    <a href="/index.html" class="header-icon">
                         <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="12" r="12" fill="#ECEFF2"/>
                             <circle cx="12" cy="12" r="12" fill="#2A6CEA"/>
@@ -134,7 +131,7 @@
                          <li class="splide__slide">
                              <div class="review">
                                  <div class="review__user-info">
-                                     <img src="/figma/images/slider/avatar1.png">
+                                     <img src="/images/slider/avatar1.png">
                                      <div class="user-info__text">
                                          <span class="user-name">Константинов Михаил Павлович</span>
                                          <span class="user-city">Санкт-Петербург</span>
@@ -146,7 +143,7 @@
                          <li class="splide__slide">
                              <div class="review">
                                  <div class="review__user-info">
-                                     <img src="/figma/images/slider/avatar2.png">
+                                     <img src="/images/slider/avatar2.png">
                                      <div class="user-info__text">
                                          <span class="user-name">Иван Иванов</span>
                                          <span class="user-city">Санкт-Петербург</span>
@@ -158,7 +155,7 @@
                          <li class="splide__slide">
                              <div class="review">
                                  <div class="review__user-info">
-                                     <img src="/figma/images/slider/avatar3.png">
+                                     <img src="/images/slider/avatar3.png">
                                      <div class="user-info__text">
                                          <span class="user-name">Артем Корнилов</span>
                                          <span class="user-city">Самара</span>
@@ -170,7 +167,7 @@
                          <li class="splide__slide">
                              <div class="review">
                                  <div class="review__user-info">
-                                     <img src="/figma/images/slider/avatar4.png">
+                                     <img src="/images/slider/avatar4.png">
                                      <div class="user-info__text">
                                          <span class="user-name">Иван Иванов</span>
                                          <span class="user-city">Санкт-Петербург, ИП Иванов</span>
@@ -336,6 +333,6 @@
         &copy; 2024 Лаборатория интернет
     </footer>
     <script src="/vendor/js/splide.min.js"></script> <? // файл для подключения модуля слайдера ?>
-    <? FileManager::linkJS('/figma/js/script.js'); ?>
+    <script src="/js/script.js"></script>
 </body>
 </html>
