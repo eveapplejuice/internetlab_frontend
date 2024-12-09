@@ -97,7 +97,7 @@ $(document).ready(function () {
         let $inputTel = $('input[name="tel"]');
 
         $inputName.siblings('.warning').detach();
-        $inputName.siblings('.warning').detach();
+        $inputTel.siblings('.warning').detach();
 
 
         if ($inputName.val() !== '' && $inputTel.val() !== '') {
