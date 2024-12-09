@@ -96,12 +96,15 @@ $(document).ready(function () {
         let $inputName = $('input[name="name"]');
         let $inputTel = $('input[name="tel"]');
 
+        $inputName.siblings('.warning').detach();
+        $inputName.siblings('.warning').detach();
+
 
         if ($inputName.val() !== '' && $inputTel.val() !== '') {
             if (!!!isValid($inputName.val(), $inputName.prop('name')) && !!!isValid($inputTel.val(), $inputTel.prop('name'))) {
                 if ($('input[name="agreement"]').prop('checked')) {
                     $.ajax({
-                        url: '/figma/ajax/ajax.php',
+                        url: 'ajax/ajax.php',
                         type: 'post',
                         data: $('#user_form').serialize(),
                         success: function (response) {
