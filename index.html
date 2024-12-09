@@ -1,0 +1,341 @@
+<? require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/FileManager.php'; ?>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <? FileManager::linkCSS('/vendor/css/splide.min.css'); ?>
+    <? FileManager::linkCSS('/figma/style.css');?>
+    <script src="/vendor/js/jquery-3.7.1.min.js"></script>
+    <title>Тестовый макет</title>
+</head>
+<body>
+    <header>
+        <div class="main-header container">
+            <a href="/figma/layout.php" class="header-icon">
+                <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="12" r="12" fill="#ECEFF2"/>
+                    <circle cx="12" cy="12" r="12" fill="#2A6CEA"/>
+                </svg>
+                <span class="header-icon__name">testLab</span>
+            </a>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="#main_guideline_navigation">Как это работает</a></li>
+                    <li><a href="#weekly_summary_navigation">Стоимость</a></li>
+                    <li><a href="#qa_navigation">Вопросы и ответы</a></li>
+                    <li><a href="#form_navigation">Форма</a></li>
+                </ul>
+            </nav>
+            <div class="header-burger">
+                <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="22" height="2" fill="white"/>
+                    <rect y="10" width="22" height="2" fill="white"/>
+                </svg>
+            </div>
+            <div class="header-burger__menu">
+                <div class="header-burger__header">
+                    <a href="/figma/layout.php" class="header-icon">
+                        <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="25" cy="12" r="12" fill="#ECEFF2"/>
+                            <circle cx="12" cy="12" r="12" fill="#2A6CEA"/>
+                        </svg>
+                        <span class="header-icon__name">testLab</span>
+                    </a>
+                    <svg class="header-icon__close" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.515625" y="16.071" width="22" height="2" transform="rotate(-45 0.515625 16.071)" fill="#191C1F"/>
+                        <rect x="1.92969" y="0.514771" width="22" height="2" transform="rotate(45 1.92969 0.514771)" fill="#191C1F"/>
+                    </svg>
+                </div>
+                <a href="#main_guideline_navigation" class="menu-item">Как это работает
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.400124 12.293C0.212616 12.4807 0.107328 12.7351 0.107422 13.0004C0.107516 13.2657 0.212984 13.52 0.400624 13.7075C0.588265 13.895 0.842708 14.0003 1.10798 14.0002C1.37325 14.0001 1.62762 13.8947 1.81512 13.707L6.40012 9.12104C6.96254 8.55845 7.27848 7.79553 7.27848 7.00004C7.27848 6.20454 6.96254 5.44162 6.40012 4.87904L1.81112 0.293037C1.62072 0.120876 1.3714 0.0285305 1.11478 0.0351199C0.858167 0.0417093 0.613915 0.146729 0.432594 0.328435C0.251274 0.510141 0.146773 0.754617 0.140729 1.01124C0.134685 1.26787 0.227559 1.517 0.400124 1.70704L4.98612 6.29304C5.17359 6.48056 5.27891 6.73487 5.27891 7.00004C5.27891 7.2652 5.17359 7.51951 4.98612 7.70704L0.400124 12.293Z" fill="#83898F"/>
+                    </svg>
+                </a>
+                <a href="#weekly_summary_navigation" class="menu-item">Стоимость
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.400124 12.293C0.212616 12.4807 0.107328 12.7351 0.107422 13.0004C0.107516 13.2657 0.212984 13.52 0.400624 13.7075C0.588265 13.895 0.842708 14.0003 1.10798 14.0002C1.37325 14.0001 1.62762 13.8947 1.81512 13.707L6.40012 9.12104C6.96254 8.55845 7.27848 7.79553 7.27848 7.00004C7.27848 6.20454 6.96254 5.44162 6.40012 4.87904L1.81112 0.293037C1.62072 0.120876 1.3714 0.0285305 1.11478 0.0351199C0.858167 0.0417093 0.613915 0.146729 0.432594 0.328435C0.251274 0.510141 0.146773 0.754617 0.140729 1.01124C0.134685 1.26787 0.227559 1.517 0.400124 1.70704L4.98612 6.29304C5.17359 6.48056 5.27891 6.73487 5.27891 7.00004C5.27891 7.2652 5.17359 7.51951 4.98612 7.70704L0.400124 12.293Z" fill="#83898F"/>
+                    </svg>
+                </a>
+                <a href="#qa_navigation" class="menu-item">Вопросы и ответы
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.400124 12.293C0.212616 12.4807 0.107328 12.7351 0.107422 13.0004C0.107516 13.2657 0.212984 13.52 0.400624 13.7075C0.588265 13.895 0.842708 14.0003 1.10798 14.0002C1.37325 14.0001 1.62762 13.8947 1.81512 13.707L6.40012 9.12104C6.96254 8.55845 7.27848 7.79553 7.27848 7.00004C7.27848 6.20454 6.96254 5.44162 6.40012 4.87904L1.81112 0.293037C1.62072 0.120876 1.3714 0.0285305 1.11478 0.0351199C0.858167 0.0417093 0.613915 0.146729 0.432594 0.328435C0.251274 0.510141 0.146773 0.754617 0.140729 1.01124C0.134685 1.26787 0.227559 1.517 0.400124 1.70704L4.98612 6.29304C5.17359 6.48056 5.27891 6.73487 5.27891 7.00004C5.27891 7.2652 5.17359 7.51951 4.98612 7.70704L0.400124 12.293Z" fill="#83898F"/>
+                    </svg>
+                </a>
+                <a href="#form_navigation" class="menu-item">Форма
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.400124 12.293C0.212616 12.4807 0.107328 12.7351 0.107422 13.0004C0.107516 13.2657 0.212984 13.52 0.400624 13.7075C0.588265 13.895 0.842708 14.0003 1.10798 14.0002C1.37325 14.0001 1.62762 13.8947 1.81512 13.707L6.40012 9.12104C6.96254 8.55845 7.27848 7.79553 7.27848 7.00004C7.27848 6.20454 6.96254 5.44162 6.40012 4.87904L1.81112 0.293037C1.62072 0.120876 1.3714 0.0285305 1.11478 0.0351199C0.858167 0.0417093 0.613915 0.146729 0.432594 0.328435C0.251274 0.510141 0.146773 0.754617 0.140729 1.01124C0.134685 1.26787 0.227559 1.517 0.400124 1.70704L4.98612 6.29304C5.17359 6.48056 5.27891 6.73487 5.27891 7.00004C5.27891 7.2652 5.17359 7.51951 4.98612 7.70704L0.400124 12.293Z" fill="#83898F"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-preview">
+            <div class="container">
+                <div class="main-preview__textbox">
+                    <div class="textbox__text-level1">Говорят, никогда не поздно сменить профессию</div>
+                    <div class="textbox__text-level2">Сделай круто тестовое задание и у тебя получится</div>
+                    <div class="textbox__button">Проще простого!</div>
+                </div>
+            </div>
+        </div>
+        <div id="main_guideline_navigation" class="main-guideline container">
+            <span class="main-guideline__text-level1">Как это работает</span>
+            <div class="main-guideline__box">
+                <div class="box-item">
+                    <img src="images/main/guideline-box/waiting.svg" class="box-item__svg">
+                    <div class="box-item__text">
+                        <span class="box-item__title">Прочитай задание внимательно</span>
+                        Думаю у тебя не займет это больше двух-трех минут
+                    </div>
+                </div>
+                <div class="box-item">
+                    <img src="images/main/guideline-box/delivery-truck.svg" class="box-item__svg">
+                    <div class="box-item__text">
+                        <span class="box-item__title">Изучи весь макет заранее</span>
+                        Подумай как это будет работать на разных разрешениях и при скролле
+                    </div>
+                </div>
+                <div class="box-item">
+                    <img src="images/main/guideline-box/secure.svg" class="box-item__svg">
+                    <div class="box-item__text">
+                        <span class="box-item__title">Сделай хорошо</span>
+                        Чтобы мы могли тебе доверить подобные задачи в будущем
+                    </div>
+                </div>
+                <div class="box-item">
+                    <img src="images/main/guideline-box/money-bags.svg" class="box-item__svg">
+                    <div class="box-item__text">
+                        <span class="box-item__title">Получи предложение</span>
+                        Ну тут все просто, не я придумал правила, но думаю так и будет)))
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="weekly_summary_navigation" class="weekly-summary container">
+            <div class="weekly-summary__text">
+                <span class="weekly-summary__text-title">Круто, ты дошел до третьего блока</span>
+                <p>63% опрошенных пользовались кредитами из-за того, что не могли покрыть непредвиденные расходы свыше 15 000 ₽.</p>
+                <br>
+                <p>Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах.</p>
+            </div>
+            <img src="images/main/truck_man.png">
+        </div>
+
+
+        <div class="reviews">
+            <span class="reviews__title">Отзывы</span>
+            <div class="reviews__slider splide">
+                 <div class="splide__track">
+                     <ul class="splide__list">
+                         <li class="splide__slide">
+                             <div class="review">
+                                 <div class="review__user-info">
+                                     <img src="/figma/images/slider/avatar1.png">
+                                     <div class="user-info__text">
+                                         <span class="user-name">Константинов Михаил Павлович</span>
+                                         <span class="user-city">Санкт-Петербург</span>
+                                     </div>
+                                 </div>
+                                 <p>Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы </p>
+                             </div>
+                         </li>
+                         <li class="splide__slide">
+                             <div class="review">
+                                 <div class="review__user-info">
+                                     <img src="/figma/images/slider/avatar2.png">
+                                     <div class="user-info__text">
+                                         <span class="user-name">Иван Иванов</span>
+                                         <span class="user-city">Санкт-Петербург</span>
+                                     </div>
+                                 </div>
+                                 <p>Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы </p>
+                             </div>
+                         </li>
+                         <li class="splide__slide">
+                             <div class="review">
+                                 <div class="review__user-info">
+                                     <img src="/figma/images/slider/avatar3.png">
+                                     <div class="user-info__text">
+                                         <span class="user-name">Артем Корнилов</span>
+                                         <span class="user-city">Самара</span>
+                                     </div>
+                                 </div>
+                                 <p>Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения.</p>
+                             </div>
+                         </li>
+                         <li class="splide__slide">
+                             <div class="review">
+                                 <div class="review__user-info">
+                                     <img src="/figma/images/slider/avatar4.png">
+                                     <div class="user-info__text">
+                                         <span class="user-name">Иван Иванов</span>
+                                         <span class="user-city">Санкт-Петербург, ИП Иванов</span>
+                                     </div>
+                                 </div>
+                                 <p>Каждый из нас понимает очевидную вещь: перспективное планирование предоставляет широкие возможности для анализа существующих паттернов поведения. В своём стремлении улучшить пользовательский опыт мы упускаем, что активно развивающиеся страны третьего мира призваны к ответу.</p>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+        </div>
+
+        <div id="qa_navigation" class="qa container">
+            <span class="qa__title">Вопросы и ответы</span>
+            <div class="qa__row">
+                <div class="row-content">
+                    Подтверждено: сознание наших соотечественников не замутнено пропагандой?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    Прототип нового сервиса - это как трубный призыв?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    Частокол на границе продолжает удивлять?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent">В частности, дальнейшее развитие различных форм деятельности позволяет выполнить важные задания по разработке дальнейших направлений развития. Предварительные выводы неутешительны: экономическая повестка сегодняшнего дня говорит о возможностях существующих финансовых и административных условий.</p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    Очевидцы сообщают, что слышали грохот грома градущих изменений?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    И по сей день в центральных регионах звучит перекатами печальный плач оппозиции?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    Нынче никто не может себе позволить инициировать треск разлетающихся скреп?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+            <div class="qa__row">
+                <div class="row-content">
+                    Высококачественный прототип будущего проекта обнадёживает?
+                    <div class="expand-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 11H13V7C13 6.73478 12.8946 6.48043 12.7071 6.29289C12.5196 6.10536 12.2652 6 12 6C11.7348 6 11.4804 6.10536 11.2929 6.29289C11.1054 6.48043 11 6.73478 11 7V11H7C6.73478 11 6.48043 11.1054 6.29289 11.2929C6.10536 11.4804 6 11.7348 6 12C6 12.2652 6.10536 12.5196 6.29289 12.7071C6.48043 12.8946 6.73478 13 7 13H11V17C11 17.2652 11.1054 17.5196 11.2929 17.7071C11.4804 17.8946 11.7348 18 12 18C12.2652 18 12.5196 17.8946 12.7071 17.7071C12.8946 17.5196 13 17.2652 13 17V13H17C17.2652 13 17.5196 12.8946 17.7071 12.7071C17.8946 12.5196 18 12.2652 18 12C18 11.7348 17.8946 11.4804 17.7071 11.2929C17.5196 11.1054 17.2652 11 17 11Z" fill="#191C1F"/>
+                            <circle cx="12" cy="12" r="11" stroke="#191C1F" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <p class="row-subcontent"></p>
+            </div>
+        </div>
+
+        <div class="microcredits">
+            <div class="microcredits-grid container">
+                <div class="microcredits-grid__item">
+                    <span class="item-title">Опрошенных пользовались микрокредитами</span>
+                    <p class="item-text">Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах</p>
+                </div>
+                <div class="microcredits-grid__item">
+                    <span class="item-title">Опрошенных пользовались микрокредитами</span>
+                    <p class="item-text">Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафахНе могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах</p>
+                </div>
+
+                <div class="microcredits-grid__item">
+                    <span class="item-title">Опрошенных пользовались микрокредитами</span>
+                    <p class="item-text">Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафахНе могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах</p>
+                </div>
+                <div class="microcredits-grid__item">
+                    <span class="item-title">Опрошенных пользовались микрокредитами</span>
+                    <p class="item-text">Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах Не могли покрыть внезапные траты свыше 7000 ₽. Доступ к заработанным деньгам помогает отказаться от кредитов и экономить деньги на процентах и штрафах</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="form_navigation" class="form__block container">
+            <form id="user_form" class="form__wrapper">
+                <span class="form-title">Отправь форму</span>
+                <div class="form">
+                    <div class="form-item">
+                        <input type="text" name="name" autocomplete="off" class="form-item__input" value="">
+                        <label class="input-inner-label" for="name">Имя</label>
+                        <span class="correct-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#25CD82"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="form-item">
+                        <input type="tel" name="tel" autocomplete="off" class="form-item__input" value="">
+                        <label class="input-inner-label" for="tel">Телефон</label>
+                        <span class="correct-icon">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#25CD82"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="form__buttons">
+                    <label>
+                        <input type="checkbox" name="agreement" class="ll">
+                        <span class="input-design">
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 6.51041L5.4791 12L16 1.48947L14.4896 -9.53674e-05L5.4791 8.9999L1.48953 5.01036L0 6.51041Z" fill="white"/>
+                            </svg>
+                        </span>
+                        Согласен, отказываюсь
+                    </label>
+                    <div id="form_send_button" class="send-button">Отправить</div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Лаборатория интернет
+    </footer>
+    <script src="/vendor/js/splide.min.js"></script> <? // файл для подключения модуля слайдера ?>
+    <? FileManager::linkJS('/figma/js/script.js'); ?>
+</body>
+</html>
