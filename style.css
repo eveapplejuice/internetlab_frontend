@@ -1,17 +1,17 @@
 @font-face {
     font-weight: 400;
     font-family: Graphik LCG;
-    src: url("/fonts/GraphikLCG-Regular.ttf");
+    src: url("fonts/GraphikLCG-Regular.ttf");
 }
 @font-face {
     font-weight: 700;
     font-family: Graphik LCG;
-    src: url("/fonts/GraphikLCG-Bold.ttf");
+    src: url("fonts/GraphikLCG-Bold.ttf");
 }
 @font-face {
     font-weight: 600;
     font-family: Graphik LCG;
-    src: url("/fonts/GraphikLCG-Semibold.ttf");
+    src: url("fonts/GraphikLCG-Semibold.ttf");
 }
 
 html {
@@ -159,7 +159,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: no-repeat linear-gradient(to top, rgba(42, 108, 234, 0.8), rgba(42, 108, 234, 0.8)), url("/images/main/preview.jpg") center;
+    background: no-repeat linear-gradient(to top, rgba(42, 108, 234, 0.8), rgba(42, 108, 234, 0.8)), url("images/main/preview.jpg") center;
     background-size: cover;
     height: 960px;
     margin-top: -80px;
